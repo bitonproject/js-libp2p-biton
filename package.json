@@ -1,0 +1,28 @@
+{
+  "name": "js-libp2p-biton",
+  "version": "1.0.0",
+  "description": "biton libp2p transport",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "aegir test -t node"
+  },
+  "keywords": [
+    "biton",
+    "libp2p",
+    "IPFS"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bitonproject/js-libp2p-biton.git"
+  },
+  "author": "Marios Isaakidis (marios@bitonproject.org)",
+  "license": "BSD-3-Clause",
+  "dependencies": {
+    "biton": "git+https://github.com/bitonproject/biton.git",
+    "class-is": "^1.1.0",
+    "interface-connection": "^0.3.3",
+    "mafmt": "^7.1.0",
+    "multiaddr": "^7.4.3",
+    "stream-to-pull-stream": "^1.7.3"
+  }
+}
