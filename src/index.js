@@ -5,15 +5,16 @@ const toPull = require('stream-to-pull-stream')
 const mafmt = require('mafmt')
 const withIs = require('class-is')
 const Connection = require('interface-connection').Connection
-const createListener = require('./createListener')
+const createListener = require('./create-listener')
 
+const bitonClient = require('biton')
 
 function noop () {}
 
 class biton {
 
     constructor(opts = null) {
-        this.bitonClient = new bitonClient(opts)
+        this.biton = new bitonClient(opts)
     }
 
     dial (ma, options, callback) {

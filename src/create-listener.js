@@ -3,9 +3,9 @@
 const debug = require('debug')('libp2p:biton')
 const multiaddr = require('multiaddr')
 const Connection = require('interface-connection').Connection
-const bitonClient = require('biton')
 const toPull = require('stream-to-pull-stream')
 const EventEmitter = require('events').EventEmitter
+const biton = require('biton')
 
 const P2P_MULTIADDR_CODE = 421
 const CLOSE_TIMEOUT = 2000
@@ -15,7 +15,7 @@ function noop () {}
 module.exports = (handler) => {
     const listener = new EventEmitter()
 
-    const server = bitonClient.createServer((socket) => {
+    const server = biton.createServer((socket) => {
         // Avoid uncaught errors caused by unstable connections
         socket.on('error', noop)
 
